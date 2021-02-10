@@ -22,8 +22,10 @@
                 v-show="imgSrc"
                 class="mb-4"
                 ref='cropper'
-                :view-mode="1"
+                :view-mode="field.hasOwnProperty('viewMode') ? field.viewMode : 1"
                 :aspect-ratio="field.aspectRatio || NaN"
+                :containerStyle="field.containerStyle || NaN"
+                :zoomable="field.hasOwnProperty('zoomable') ? field.zoomable : true"
                 :src="imgSrc"
             ></vue-cropper>
 
