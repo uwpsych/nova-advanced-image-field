@@ -112,6 +112,7 @@ export default {
             this.imgSrc = ''
             this.file = null
             this.fileName = ''
+            this.$refs.fileField.value = "";
         },
 
         /**
